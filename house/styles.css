@@ -1,0 +1,111 @@
+body {
+  text-align: center;
+  background: cornsilk;
+  padding: 24px 12vw;
+}
+
+body.outside {
+  background: lightgreen;
+}
+
+.page-wrapper {
+  height: 60svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body.singular-link .page-wrapper {
+  justify-content: start;
+  gap: 2rem;
+}
+
+/* a {
+  color: #0000ff;
+} */
+
+p {
+  margin: 0.25em 0;
+}
+
+.ded-end {
+  margin: 0;
+  text-decoration: underline;
+}
+
+.room-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+#kitchen::before {
+  content: 'kitchen';
+}
+
+#kitchen:hover::before {
+  content: 'hope there are no dirty dishes';
+}
+
+#back-bedroom::before {
+  content: 'back to bedroom';
+}
+
+#back-bedroom:hover::before {
+  content: 'washed my hands with soap';
+}
+
+#bathroom::before {
+  content: 'bathroom';
+}
+
+#bathroom:hover::before {
+  content: 'i need to pee';
+}
+
+#bed::before {
+  content: 'bed';
+}
+
+#bed:hover::before {
+  content: 'time to doomscroll';
+}
+
+#bedroom::before {
+  content: 'bedroom';
+}
+
+#bedroom:hover::before {
+  content: 'time to change into indoor clothes';
+}
+
+#home::before {
+  content: 'go home';
+}
+
+#home:hover::before {
+  content: 'take off my shoes';
+}
+
+#sink::before {
+  content: 'sink';
+}
+
+#sink:hover::before {
+  content: 'no dishes!';
+}
+
+#hallway::before {
+  content: 'hallway';
+}
+
+#hallway:hover::before {
+  content: 'so many places to explore';
+}
+
+#outside::before {
+  content: 'go back outside';
+}
+
+#outside:hover::before {
+  content: 'put on your shoes';
+}
