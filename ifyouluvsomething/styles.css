@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color: rgb(0, 0, 197);
+}
+
+body,
+html {
+  height: 80svh;
+  margin: 0;
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
+  color: var(--color);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+  font-style: italic;
+}
+
+#wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 36px;
+  grid-template-areas:
+    'fish1   .       fish2   fish3   fish4'
+    '.       fish5   fish6   .       fish7'
+    'fish8   fish9   .       fish10  fish11';
+  height: calc(100% - 2em);
+  padding: 1em;
+}
+
+.fish {
+  border: 1px solid var(--color);
+  background-color: var(--color);
+  cursor: grab;
+}
+
+.fish:after {
+  content: '𓆟';
+  transform: translateX(0);
+  display: block;
+  animation: swim 10s linear paused infinite;
+  animation-fill-mode: forwards;
+  color: var(--color);
+}
+
+.fish:hover:after,
+.fish:active:after {
+  animation-play-state: running;
+}
+
+@media screen and (max-width: 767px) {
+  body,
+  html {
+    font-size: 30px;
+  }
+
+  .fish:after {
+    animation-duration: 6s;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+}
+
+@keyframes swim {
+  0% {
+    content: '𓆟';
+    transform: translateX(0);
+    visibility: visible;
+  }
+  5% {
+    content: '𓆝';
+    transform: translate(-10vw, -10px);
+  }
+  10% {
+    content: '𓆞';
+    transform: translate(-20vw, -20px);
+  }
+  15% {
+    content: '𓆟';
+    transform: translate(-30vw, 0);
+  }
+  20% {
+    content: '𓆝';
+    transform: translate(-40vw, -10px);
+  }
+  25% {
+    content: '𓆞';
+    transform: translate(-50vw, -20px);
+  }
+  30% {
+    content: '𓆟';
+    transform: translate(-60vw, 0);
+  }
+  35% {
+    content: '𓆝';
+    transform: translate(-70vw, -10px);
+  }
+  40% {
+    content: '𓆞';
+    transform: translate(-80vw, -20px);
+  }
+  49.99% {
+    content: '𓆟';
+    transform: translate(-90vw, 0);
+    visibility: hidden;
+  }
+  50% {
+    content: '𓆝';
+    transform: translate(0, -10px);
+    visibility: hidden;
+  }
+  50.01% {
+    content: '𓆞';
+    transform: translate(90vw, -20px);
+    visibility: visible;
+  }
+  55% {
+    content: '𓆟';
+    transform: translate(90vw, 0);
+  }
+  60% {
+    content: '𓆝';
+    transform: translate(80vw, -10px);
+  }
+  65% {
+    content: '𓆞';
+    transform: translate(70vw, -20px);
+  }
+  70% {
+    content: '𓆟';
+    transform: translate(60vw, 0);
+  }
+  75% {
+    content: '𓆝';
+    transform: translate(50vw, -10px);
+  }
+  80% {
+    content: '𓆞';
+    transform: translate(40vw, -20px);
+  }
+  85% {
+    content: '𓆟';
+    transform: translate(30vw, 0);
+  }
+  90% {
+    content: '𓆝';
+    transform: translate(20vw, -10px);
+  }
+  95% {
+    content: '𓆞';
+    transform: translate(10vw, -20px);
+  }
+  100% {
+    content: '𓆟';
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+
+.fish1 {
+  grid-area: fish1;
+}
+.fish2 {
+  grid-area: fish2;
+}
+.fish3 {
+  grid-area: fish3;
+}
+.fish4 {
+  grid-area: fish4;
+}
+.fish5 {
+  grid-area: fish5;
+}
+.fish6 {
+  grid-area: fish6;
+}
+.fish7 {
+  grid-area: fish7;
+}
+.fish8 {
+  grid-area: fish8;
+}
+.fish9 {
+  grid-area: fish9;
+}
+.fish10 {
+  grid-area: fish10;
+}
+.fish11 {
+  grid-area: fish11;
+}
