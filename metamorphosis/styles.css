@@ -46,7 +46,7 @@ body {
 }
 
 h1 {
-  position: fixed;
+  /* position: fixed; */
   font-size: 3em;
   top: 8px;
   left: 12px;
@@ -66,6 +66,21 @@ h1 {
   justify-content: center;
   align-items: center;
   height: 90svh;
+  position: relative;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.caption::after {
+  text-align: center;
+  content: '[Egg]';
+  font-size: 2em;
+  font-family: 'Instrument Serif', serif;
 }
 
 /* 1_egg */
@@ -181,6 +196,10 @@ h1 {
     display: none;
   }
 
+  .caption::after {
+    content: '[Catepillar]';
+  }
+
   .catepillar-wrapper {
     display: block;
     transform: translateX(-80vw);
@@ -206,6 +225,10 @@ h1 {
   .butterfly-mid-wrapper,
   .butterfly-wrapper {
     display: none;
+  }
+
+  .caption::after {
+    content: '[Pupa]';
   }
 
   .pupa-wrapper {
@@ -295,6 +318,10 @@ h1 {
     display: none;
   }
 
+  .caption::after {
+    content: '[Butterfly]';
+  }
+
   .butterfly-end-wrapper {
     display: block;
     height: auto !important;
@@ -322,6 +349,10 @@ h1 {
   .butterfly-mid-wrapper,
   .butterfly-end-wrapper {
     display: none;
+  }
+
+  .caption::after {
+    content: '[Fin]';
   }
 
   .butterfly-wrapper {
