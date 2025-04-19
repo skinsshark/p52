@@ -94,7 +94,7 @@ header {
 
 .egg-wrapper {
   visibility: visible;
-  animation: remove 10s linear 1 forwards;
+  animation: remove 10s linear 1;
   animation-delay: 4s;
 }
 
